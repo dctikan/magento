@@ -11,7 +11,7 @@
 import os
 from setuptools import setup
 
-execfile(os.path.join('magento', 'version.py'))
+exec(open(os.path.join('magento', 'version.py')).read())
 
 setup(
     name = 'magento',
@@ -26,7 +26,7 @@ setup(
     zip_safe=False,
     platforms='any',
     install_requires=[
-        'suds>=0.3.9',
+        'suds-jurko',
     ],
     classifiers=[
         'Development Status :: 6 - Mature',
