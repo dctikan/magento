@@ -9,17 +9,16 @@
     :license: AGPLv3, see LICENSE for more details
 '''
 
-PROTOCOLS = []
-try:
-   import sys
+import sys
 
-   PROTOCOLS = []
-   try:
-      from xmlrpclib import ServerProxy
-      if sys.version_info <= (2, ):
-          from xmlrpclib import ServerProxy
-      else:
-          from xmlrpc.client import ServerProxy
+PROTOCOLS = []
+
+try:
+   from xmlrpclib import ServerProxy
+   if sys.version_info <= (2, ):
+       from xmlrpclib import ServerProxy
+   else:
+       from xmlrpc.client import ServerProxy
 except ImportError:
     pass
 else:
