@@ -5,6 +5,13 @@ Python library to connect to Magento Webservices.
 
 Check documentation source code
 
+This fork provides Python 3 support (all credits for patch goes to @giampaolo)
+
+Installation
+-----
+
+pip install https://github.com/sebbrochet/magento/zipball/master
+
 Usage
 -----
 
